@@ -10,17 +10,46 @@
     "resolveJsonModule": true,
     "esModuleInterop": true,
     "noImplicitThis": false,
+
+    "importHelpers": true,
+    "strictNullChecks": false,
+    "allowSyntheticDefaultImports": true,
+    "noEmit": true,
     // "noImplicitAny": false,
-    "lib": ["esnext", "dom"]
+    "skipLibCheck": true,
+    "lib": ["ESNext", "DOM", "WebWorker"]
   },
+  "baseUrl": ".",
   "paths": {
     "@/*": [
       "src/*"
     ],
+    "@components/*": [
+      "src/components/*"
+    ],
     "@controller/*": [
       "src/controller/*"
     ],
+    "@modules/*": [
+      "src/modules/*"
+    ],
   },
-  "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue"],
-  "references": [{ "path": "./tsconfig.node.json" }]
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.d.ts",
+    "src/**/*.tsx",
+    "src/**/*.vue",
+    "src/**/*.js",
+    "node_modules/vite-plugin-pwa/client.d.ts"
+  ],
+  "exclude": [
+    "dist",
+    "node_modules",
+    "test",
+    "test.ts",
+    "**/*.spec.ts",
+    "**/*.worker.ts"
+  ],
+  "references": [{ "path": "./tsconfig.node.json" }],
+  "types": ["@intlify/vite-plugin-vue-i18n/client"]
 }

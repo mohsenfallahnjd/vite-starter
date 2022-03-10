@@ -10,7 +10,7 @@ const { locales } = config;
 
 /**
  * Make locales empty object
- * 
+ *
  * @returns {object}
  */
 const makeLocalesObj = (): object => {
@@ -93,7 +93,6 @@ const dateTimeFormats = {
 
 // Register messages
 const i18n: any = createI18n({
-    legacy         : false,
     locale,
     fallbackLocale,
     messages,

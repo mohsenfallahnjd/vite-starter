@@ -4,6 +4,7 @@ module.exports = {
     env: {
         browser: true,
         node   : true,
+        es2021 : true,
     },
 
     rules: {
@@ -93,7 +94,7 @@ module.exports = {
             'error',
             {
                 order: [
-                    'template', 'script', 'style',
+                    'script', 'template', 'style',
                 ],
             },
         ],
@@ -185,7 +186,8 @@ module.exports = {
     ],
 
     parserOptions: {
-        parser: '@typescript-eslint/parser',
+        parser     : '@typescript-eslint/parser',
+        ecmaVersion: 2021,
     },
 
     extends: [
