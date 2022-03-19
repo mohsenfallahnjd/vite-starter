@@ -9,3 +9,22 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
+
+ul {
+    margin-bottom: 30px;
+    padding: 0;
+}
+
+li {
+    margin: 8px auto;
+    list-style: none;
+}
+
+input {
+    margin: auto 3px;
+}
+
+h3 {
+    margin-top: 15px;
+    padding-top: 15px;
+}

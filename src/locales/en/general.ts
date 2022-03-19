@@ -1,9 +1,4 @@
 /*-----------------------------------------------------------------
-- Home translations
+- General translations
 -----------------------------------------------------------------*/
-export default {
-
-    title: 'Home',
-    pinia: 'Work with pinia 🍍 as store',
-
-};
+export default {};

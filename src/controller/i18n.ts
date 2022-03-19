@@ -22,13 +22,16 @@ const makeLocalesObj = (): object => {
 };
 let messages: any = makeLocalesObj();
 type files = {
+    root: any | undefined,
     modules: any | undefined,
 };
 const importedFiles: files | any = {
+    root   : null,
     modules: null,
 };
 
 // Load files
+importedFiles.root = require.context('@/locales', true, /\.(js|ts|json)$/);
 importedFiles.modules = require.context('@modules', true, /\/locales[\S]*\.(js|ts|json)$/);
 
 /**

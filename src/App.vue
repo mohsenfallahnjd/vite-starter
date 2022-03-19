@@ -2,14 +2,33 @@
     import { useMeta } from 'vue-meta';
     import { ref, Ref } from 'vue';
     import { ReloadPWA } from '@components/index.ts';
+    import { useI18n } from 'vue-i18n';
 
-    const webTitle: Ref<string> = ref('Mohsen Fallahnejad officials website');
+    const { locale } = useI18n();
+    const webTitle: Ref<string> = ref('Your website base title');
 
     useMeta({
-        title    : 'Front-end developer',
+        title    : '',
         htmlAttrs: {
-            lang: 'en',
+            lang: locale.value,
             amp : true,
+        },
+        charset    : 'UTF-8',
+        description: '',
+        og         : {
+            site_name  : webTitle.value,
+            title      : '',
+            description: '',
+            image      : [''],
+            url        : '',
+        },
+        twitter: {
+            title      : '',
+            description: '',
+            image      : [''],
+            creator    : '',
+            card       : '',
+            url        : '',
         },
     });
 </script>

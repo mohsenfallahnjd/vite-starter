@@ -1,0 +1,30 @@
+// -------------------------------------------------------------------------- //
+// Components: PWA Reload
+// -------------------------------------------------------------------------- //
+.pwa-toast {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    margin: 16px;
+    padding: 12px;
+    border: 1px solid #88888855;
+    border-radius: 4px;
+    background-color: white;
+    box-shadow: 3px 4px 5px 0 #88888855;
+    text-align: left;
+}
+
+.pwa-toast .message {
+    margin-bottom: 8px;
+    color: #121314;
+}
+
+.pwa-toast button {
+    margin-right: 5px;
+    padding: 3px 10px;
+    border: 1px solid #88888855;
+    border-radius: 2px;
+    outline: none;
+    cursor: pointer;
+}

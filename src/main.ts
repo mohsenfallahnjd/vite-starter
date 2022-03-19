@@ -10,6 +10,7 @@ export const createApp = (base: string) => {
         router,
         metaPlugin,
         i18n,
+        createPinia,
     } = CoreInit;
     const metaManager = CoreInit.createMetaManager();
 
@@ -17,12 +18,11 @@ export const createApp = (base: string) => {
     app.use(router);
     app.use(metaManager);
     app.use(metaPlugin);
+    app.use(createPinia());
 
     return {
         app,
         router,
-        i18n,
-        metaManager,
     };
 };
 
